@@ -1,0 +1,88 @@
+---
+title: Week 3 Marriage Licenses
+subtitle: Data Analysis 
+author: 
+  - Zitong Guo
+thanks: "Code and data are available at: LINK."
+date: 19 September, 2024
+date-format: long
+abstract: "The changes in the number of marriage licenses during different time periods"
+format: pdf
+number-sections: true
+bibliography: references.bib
+---
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+
+data <- read_csv(here::here("data/analysis_data/analysis_data.csv"))
+
+```
+
+
+# Introduction
+
+You can and should cross-reference sections and sub-sections. We use @talia, @opendatatorotno, and @rohan.
+
+The remainder of this paper is structured as follows. @sec-mydatasection
+
+
+
+# Data {#sec-mydatasection}
+
+Some of our data is of penguins (@fig-marriage), from @palmerpenguins.
+
+```{r}
+#| label: fig-marriage
+#| fig-cap: Bills of penguins
+#| echo: false
+
+data |> 
+  ggplot(aes(x = date, y = marriage_licenses)) +
+  geom_point()
+
+```
+
+Talk more about it.
+
+And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
+
+From te @opendatatorotno data we see that after the pandemic, the marriage license is more spread out and volatile on the ggplot compared to the data before COVID. Therefore, we can imply that the pandemic did impact the number of marriage licenses. 
+
+
+
+# Discussion
+
+## First discussion point {#sec-first-point}
+
+If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
+
+## Second discussion point
+
+## Third discussion point
+
+## Weaknesses and next steps
+
+Weaknesses and next steps should also be included.
+
+\newpage
+
+\appendix
+
+# Appendix {-}
+
+
+# Additional data details
+
+
+
+\newpage
+
+
+# References
+
+
